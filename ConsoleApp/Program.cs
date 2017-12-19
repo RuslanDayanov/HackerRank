@@ -1,15 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleApp
+﻿namespace ConsoleApp
 {
     class Program
     {
         static void Main(string[] args)
         {
+            ArrayManipulationFunc();
+        }
+
+        private static void ArrayManipulationFunc()
+        {
+            var arrayManipulation = new ArrayManipulation();
+            arrayManipulation.Execute();
         }
     }
 }
