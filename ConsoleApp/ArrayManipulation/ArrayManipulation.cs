@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 
 namespace ConsoleApp
 {
@@ -48,13 +49,20 @@ namespace ConsoleApp
             long[] data = new long[n];
             for (int i = 0; i < m; i++)
             {
-                for (int j = operations[i].Item1-1; j < operations[i].Item2; j++)
+                data[operations[i].Item1-1] += operations[i].Item3;
+                if (operations[i].Item2 < n)
                 {
-                    data[j] = data[j] + operations[i].Item3;
-                }                
+                    data[operations[i].Item2] -= operations[i].Item3;
+                }
             }
-            
-            return data.Max();
+            long tempMax = 0;
+            long max = 0;
+            for (int i = 0; i < n; i++)
+            {
+                tempMax += data[i];
+                if (tempMax > max) max = tempMax;
+            }
+            return max;
         }
     }
 }

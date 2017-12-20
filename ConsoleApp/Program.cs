@@ -4,13 +4,19 @@
     {
         static void Main(string[] args)
         {
-            ArrayManipulationFunc();
+            SparseArraysFunc();
         }
 
         private static void ArrayManipulationFunc()
         {
             var arrayManipulation = new ArrayManipulation();
             arrayManipulation.Execute();
+        }
+
+        private static void SparseArraysFunc()
+        {
+            var sparseArrays = new SparseArrays();
+            sparseArrays.Execute();
         }
     }
 }

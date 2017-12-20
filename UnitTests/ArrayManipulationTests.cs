@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ConsoleApp;
-using ConsoleApp.ArrayManipulation;
 using NUnit.Framework;
 
 namespace UnitTests
